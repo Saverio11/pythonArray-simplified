@@ -17,7 +17,7 @@ After you put the package folder in the same directory of the script you can imp
 
 Put this at the top of the code:
 
-```
+```python
 from arrayPack import generic as arr
 from arrayPack.sorting import sortAndSearch as sort
 from arrayPack.stack import stack as st
@@ -25,7 +25,7 @@ from arrayPack.stack import stack as st
 
 Then to use call a class or a function type the alias of the module:
 
-```
+```python
 stack1 = st.Stack("i")
 ```
 
