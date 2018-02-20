@@ -1,18 +1,13 @@
 # -*- coding: utf-8-*-
 
-import random
-import time
-from arrayPack.stack import stack as st
+from arrayPack import generic as ar
 
+myDynamicArray = ar.newDynamicArray('i')
 
-baseStack = st.Stack("i")
+ar.fillDynamicArray(myDynamicArray, 'i', 5)
 
+ar.printArray(myDynamicArray)
 
-for index in range(0, 10):
+new = ar.reverseInNewArray(myDynamicArray)
 
-    baseStack.push(random.randint(0, 3))
-    print "Primo elemento dello stack: ", baseStack.peek()
-    length = baseStack.size()
-    print "Lunghezza stack: %d" % length
-
-    time.sleep(1)
+ar.printArray(new)

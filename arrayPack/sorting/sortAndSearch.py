@@ -1,3 +1,5 @@
+import time as time_
+
 def selectionSort(myVector):
 	
 	i=0
@@ -86,10 +88,10 @@ def RicercaBinaria(vettore, x):
 			
 		elif (vettore[centro] < x):
 				primo = centro + 1
-       
+
 		else:
 			ultimo = centro - 1
-        
+
 	return trovato
 	
 	
@@ -97,39 +99,39 @@ def RicercaBinaria(vettore, x):
 def insertionSort(alist):
    for index in range(1,len(alist)):
 
-     currentvalue = alist[index]
-     position = index
+	 currentvalue = alist[index]
+	 position = index
 
-     while position>0 and alist[position-1]>currentvalue:
-         alist[position]=alist[position-1]
-         position = position-1
+	 while position>0 and alist[position-1]>currentvalue:
+		 alist[position]=alist[position-1]
+		 position = position-1
 
-     alist[position]=currentvalue
+	 alist[position]=currentvalue
 
 
 def shellSort(alist):
-    sublistcount = len(alist)//2
-    while sublistcount > 0:
+	sublistcount = len(alist)//2
+	while sublistcount > 0:
 
-      for startposition in range(sublistcount):
-        gapInsertionSort(alist,startposition,sublistcount)
+	  for startposition in range(sublistcount):
+		gapInsertionSort(alist,startposition,sublistcount)
 
-      print("After increments of size",sublistcount,
-                                   "The list is",alist)
+	  print("After increments of size",sublistcount,
+								   "The list is",alist)
 
-      sublistcount = sublistcount // 2
+	  sublistcount = sublistcount // 2
 
 def gapInsertionSort(alist,start,gap):
-    for i in range(start+gap,len(alist),gap):
+	for i in range(start+gap,len(alist),gap):
 
-        currentvalue = alist[i]
-        position = i
+		currentvalue = alist[i]
+		position = i
 
-        while position>=gap and alist[position-gap]>currentvalue:
-            alist[position]=alist[position-gap]
-            position = position-gap
+		while position>=gap and alist[position-gap]>currentvalue:
+			alist[position]=alist[position-gap]
+			position = position-gap
 
-        alist[position]=currentvalue
+		alist[position]=currentvalue
 
 
 def RicercaSequenziale(vettore,x):
@@ -137,3 +139,15 @@ def RicercaSequenziale(vettore,x):
 		if vettore[i] == x:
 			return 1
 	return False
+
+def millis():
+    return time_.time()
+
+def calcolaTempoSort(kindOfSort, array):
+    tstart = millis()
+    kindOfSort(array)
+    tend = millis()
+
+    ttot = tend - tstart
+
+    return ttot
