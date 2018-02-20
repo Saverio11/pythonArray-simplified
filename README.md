@@ -1,6 +1,6 @@
 # ArrayPack
 
-With this project we wanted to create a simple way to manage arrays objects. In order to have the maximum number of array-like object, we had to organise modules in a package named arrayPack.
+With this project we wanted to create a simple way to manipulate arrays objects. In order to have the maximum number of array-like object, we had to organise modules in a package named arrayPack.
 
 ## Getting Started
 
