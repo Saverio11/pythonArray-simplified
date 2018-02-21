@@ -1,13 +1,20 @@
 # -*- coding: utf-8-*-
 
-from arrayPack import generic as ar
+import arrayPack as ar
 
-myDynamicArray = ar.newDynamicArray('i')
+array1 = ar.newDynamicArray('f')
 
-ar.fillDynamicArray(myDynamicArray, 'i', 5)
+ar.fillDynamicArray(array1, 'f', 150)
 
-ar.printArray(myDynamicArray)
+array2 = ar.cloneArray(array1)
+array3 = ar.cloneArray(array1)
+array4 = ar.cloneArray(array1)
+array5 = ar.cloneArray(array1)
+array6 = ar.cloneArray(array1)
 
-new = ar.reverseInNewArray(myDynamicArray)
+print str(ar.sortExecutionTime(array2, ar.selectionSort))
+print str(ar.sortExecutionTime(array3, ar.bubbleSort))
+print str(ar.sortExecutionTime(array4, ar.shakerSort))
+print str(ar.sortExecutionTime(array5, ar.insertionSort))
+print str(ar.sortExecutionTime(array6, ar.shellSort))
 
-ar.printArray(new)
